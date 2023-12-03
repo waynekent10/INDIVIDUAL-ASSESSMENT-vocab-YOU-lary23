@@ -1,0 +1,42 @@
+{
+    "-NkkcMzwhDZN0pTgmjwg": {
+      "word": "Array",
+      "definition": "A data structure consisting of a collection of elements (values or variables), each identified by at least one array index or key. Depending on the language, array types may overlap (or be identified with) other data types that describe aggregates of values, such as lists and strings.",
+      "firebaseKey": "-NkkcMzwhDZN0pTgmjwg",
+      "category": "Javascript",
+      "time_submitted": "5:52",
+      "uid": ""
+    },
+    "-NkkcMzxPqpw6le6wuY6": {
+      "word": "Object",
+      "definition": "A data field that has unique attributes and behavior.",
+      "firebaseKey": "-NkkcMzxPqpw6le6wuY6",
+      "category": "Javascript",
+      "time_submitted": "11:25",
+      "uid": ""
+    },
+    "-NkkcMzyZGbsWTw8Dp6c": {
+      "word": "HTML",
+      "definition": "Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.",
+      "firebaseKey": "-NkkcMzyZGbsWTw8Dp6c",
+      "category": "HTML",
+      "time_submitted": "5:58",
+      "uid": ""
+    },
+    "-NkkcMzyZGbsWTw8Dp6d": {
+      "word": "CSS",
+      "definition": "CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.",
+      "firebaseKey": "-NkkcMzyZGbsWTw8Dp6d",
+      "category": "CSS",
+      "time_submitted": "16:01",
+      "uid": ""
+    },
+    "-NkkcMzzLo8ePYw_hbi9": {
+      "word": "MVP",
+      "definition": "The meaning of MVP in software development stands for Minimum Viable Product. It refers to a development approach where a product is built with the minimum features necessary to satisfy the early adopters or users and gather valuable feedback for further development.",
+      "firebaseKey": "-NkkcMzzLo8ePYw_hbi9",
+      "category": "General Term..",
+      "time_submitted": "0:04",
+      "uid": ""
+    }
+  }
