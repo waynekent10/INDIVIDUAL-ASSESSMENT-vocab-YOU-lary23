@@ -11,7 +11,7 @@ const navBar = () => {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" id="new-word">Create Entry</a>
+          <a class="nav-link active" aria-current="page" href="#" id="create-entry">Create Entry</a>
         </li>
         <input
               class="form-control mr-sm-2"
