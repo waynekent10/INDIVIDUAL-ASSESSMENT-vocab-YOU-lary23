@@ -1,4 +1,4 @@
-import { deleteSingleWord, getWords } from '../api/vocabData';
+import { deleteSingleWord, getSingleWord, getWords } from '../api/vocabData';
 import addWordForm from '../components/form/addWordForm';
 import { showVocab } from '../pages/vocab';
 
@@ -18,6 +18,12 @@ const domEvents = () => {
     if (e.target.id.includes('add-word-btn')) {
       console.warn('ADD Word');
       addWordForm({});
+    }
+
+    if (e.target.id.includes('edit-word-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+
+      getSingleWord(firebaseKey).then((wordObj) => addWordForm(wordObj));
     }
   });
 };
