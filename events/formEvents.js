@@ -1,0 +1,30 @@
+import { createWord, getWords, updateWord } from '../api/vocabData';
+import { showVocab } from '../pages/vocab';
+
+const formEvents = () => {
+  document.querySelector('#main-container').addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (e.target.id.includes('submit-entry')) {
+      const payload = {
+        word: document.querySelector('#word')
+          .value,
+        definition: document.querySelector('#definition')
+          .value,
+        category: document.querySelector('#category')
+          .value,
+        time_submitted: document.querySelector('#time_submitted')
+          .value,
+      };
+
+      createWord(payload).then(({ word }) => {
+        const patchPayload = { firebaseKey: word };
+
+        updateWord(patchPayload).then(() => {
+          getWords().then(showVocab);
+        });
+      });
+    }
+  });
+};
+
+export default formEvents;
