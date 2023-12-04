@@ -1,4 +1,5 @@
 import { deleteSingleWord, getWords } from '../api/vocabData';
+import addWordForm from '../components/form/addWordForm';
 import { showVocab } from '../pages/vocab';
 
 const domEvents = () => {
@@ -13,6 +14,10 @@ const domEvents = () => {
           getWords().then(showVocab);
         });
       }
+    }
+    if (e.target.id.includes('add-word-btn')) {
+      console.warn('ADD Word');
+      addWordForm({});
     }
   });
 };
