@@ -15,7 +15,9 @@ const addWordForm = (obj = {}) => {
   </div>
   <div class="form-group">
   <div class="form-group" id="select-language">
+
   </div> <button type="submit" class="btn btn-primary">Submit Word
+
   </button>
 </form>`;
 
