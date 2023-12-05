@@ -2,10 +2,10 @@ import renderToDOM from '../../utils/renderToDom';
 
 const navBar = () => {
   const domString = `
-    <nav class="navbar bg-body-tertiary">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-5">
   <div class="container-fluid">
     <a class="navbar-brand" href="#" id="home">
-      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="..." alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       Bootstrap
     </a>
     <div class="collapse navbar-collapse" id="navbarNav">
