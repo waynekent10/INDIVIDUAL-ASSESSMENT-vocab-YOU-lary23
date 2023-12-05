@@ -9,15 +9,15 @@ const showWords = (array) => {
   let domString = '';
   array.forEach((item) => {
     domString += `
-      <div class="card">
-        <div class="card-body" style="height: 180px;">
-          <h5 class="card-title">${item.word}</h5>
-            <p class="card-text bold">${item.definition}</p>
-            <hr>
-            <i id="edit-book-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
-            <i id="delete-book-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
-        </div>
-      </div>`;
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">${item.word}</h5>
+      <h5 class="card-text">${item.category}</h5>
+      <p class="card-text">${item.definition}</p>
+      <a href="#" id="edit-word-btn--${item.firebaseKey}" class="btn btn-primary">Edit</a>
+      <a href="#" id="delete-word-btn--${item.firebaseKey}" class="btn btn-danger">Delete</a>
+    </div>
+  </div>`;
   });
   renderToDOM('#wordbank', domString);
 };
