@@ -1,6 +1,6 @@
 import { deleteSingleWord, getSingleWord, getWords } from '../api/vocabData';
 import addWordForm from '../components/form/addWordForm';
-import { showVocab } from '../pages/vocab';
+import { showWords } from '../pages/vocab';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -11,7 +11,7 @@ const domEvents = () => {
         const [, firebaseKey] = e.target.id.split('--');
 
         deleteSingleWord(firebaseKey).then(() => {
-          getWords().then(showVocab);
+          getWords().then(showWords);
         });
       }
     }

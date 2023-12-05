@@ -3,16 +3,18 @@ import logoutButton from '../components/buttons/logoutButton';
 import domBuilder from '../components/shared/domBuilder';
 import navBar from '../components/shared/navBar';
 import domEvents from '../events/domEvents';
+import formEvents from '../events/formEvents';
 import navigationEvents from '../events/navigationEvents';
-import { showVocab } from '../pages/vocab';
+import { showWords } from '../pages/vocab';
 
 const startApp = () => {
   domBuilder();
   domEvents();
+  formEvents();
   navBar();
   logoutButton();
   navigationEvents();
-  getWords().then(showVocab);
+  getWords().then(showWords);
 };
 
 export default startApp;

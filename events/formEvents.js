@@ -1,5 +1,5 @@
 import { createWord, getWords, updateWord } from '../api/vocabData';
-import { showVocab } from '../pages/vocab';
+import { showWords } from '../pages/vocab';
 
 const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -20,7 +20,7 @@ const formEvents = () => {
         const patchPayload = { firebaseKey: word };
 
         updateWord(patchPayload).then(() => {
-          getWords().then(showVocab);
+          getWords().then(showWords);
         });
       });
     }
