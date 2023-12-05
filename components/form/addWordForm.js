@@ -14,11 +14,10 @@ const addWordForm = (obj = {}) => {
     <textarea class="form-control" placeholder="Enter a definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
   </div>
   <div class="form-group">
-  <div class="form-group" id="select-language">
+  <div class="form-group" id="select-category">
+  </div>
 
-  </div> <button type="submit" class="btn btn-primary">Submit Word
-
-  </button>
+  </div> <button type="submit" id="submitWord" class="btn btn-primary">Submit Word</button>
 </form>`;
 
   renderToDOM('#form-container', domString);
