@@ -29,7 +29,7 @@ const showVocab = (array) => {
   </div>
 </div>`;
   });
-  renderToDOM('#wordbank', domString)
+  renderToDOM('#wordbank', domString);
 };
 
 export { emptyVocab, showVocab };
