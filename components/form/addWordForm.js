@@ -14,6 +14,10 @@ const addWordForm = (obj = {}) => {
     <textarea class="form-control" placeholder="Enter a definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
   </div>
   <div class="form-group">
+  <label for="category">Language</label>
+  <input type="text" class="form-control" id="category" placeholder="Placeholder" value="${obj.category || ''}" required>
+</div>
+  <div class="form-group">
   <div class="form-group" id="select-category">
   </div>
 
