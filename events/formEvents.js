@@ -6,14 +6,10 @@ const formEvents = () => {
     e.preventDefault();
     if (e.target.id.includes('submit-entry')) {
       const payload = {
-        word: document.querySelector('#word')
-          .value,
-        definition: document.querySelector('#definition')
-          .value,
-        category: document.querySelector('#category')
-          .value,
-        time_submitted: document.querySelector('#time_submitted')
-          .value,
+        word: document.querySelector('#word').value,
+        definition: document.querySelector('#definition').value,
+        category: document.querySelector('#category').value,
+        time_submitted: document.querySelector('#time_submitted').value,
       };
 
       createWord(payload).then(({ word }) => {
