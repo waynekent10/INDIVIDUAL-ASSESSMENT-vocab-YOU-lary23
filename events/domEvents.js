@@ -15,7 +15,7 @@ const domEvents = () => {
         });
       }
     }
-    if (e.target.id.includes('create-entry')) {
+    if (e.target.id.includes('submitWord')) {
       console.warn('ADD Word');
       addWordForm({});
     }

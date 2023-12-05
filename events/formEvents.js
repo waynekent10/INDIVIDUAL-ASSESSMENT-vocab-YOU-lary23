@@ -8,8 +8,8 @@ const formEvents = () => {
       const payload = {
         word: document.querySelector('#word').value,
         definition: document.querySelector('#definition').value,
-        category: document.querySelector('#category').value,
-        time_submitted: document.querySelector('#time_submitted').value,
+        // category: document.querySelector('#category').value,
+        // time_submitted: document.querySelector('#time_submitted').value,
       };
 
       createWord(payload).then(({ word }) => {
