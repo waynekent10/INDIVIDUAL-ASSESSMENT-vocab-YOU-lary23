@@ -1,5 +1,6 @@
 import { getWords } from '../api/vocabData';
 import { showWords } from '../pages/vocab';
+import addWordForm from '../components/form/addWordForm';
 import { signOut } from '../utils/auth';
 
 const navigationEvents = () => {
@@ -10,6 +11,10 @@ const navigationEvents = () => {
   // HOME PAGE
   document.querySelector('#home').addEventListener('click', () => {
     getWords().then(showWords);
+  });
+  // CREATE WORD
+  document.querySelector('#createEntry').addEventListener('click', () => {
+    addWordForm({});
   });
 };
 
