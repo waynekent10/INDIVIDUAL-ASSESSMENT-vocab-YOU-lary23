@@ -12,7 +12,7 @@ const showWords = (array) => {
     <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">${item.word}</h5>
-      <h5 class="card-text">${item.category}</h5>
+      <h5 class="card-text">language: ${item.category}</h5>
       <p class="card-text">${item.definition}</p>
       <a href="#" id="edit-word-btn--${item.firebaseKey}" class="btn btn-primary">Edit</a>
       <a href="#" id="delete-word-btn--${item.firebaseKey}" class="btn btn-danger">Delete</a>
