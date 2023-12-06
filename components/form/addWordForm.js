@@ -15,16 +15,11 @@ const addWordForm = (obj = {}) => {
   </div>
   <select class="form-select" aria-label="Default select example" id="category" required>
   <option selected>Select a Language/option>
-  <option value="Javascript">One</option>
-  <option value="CSS">Two</option>
-  <option value="General Term..">Three</option>
+  <option value="Javascript"${obj.category === 'Javascript' ? 'selected' : ''}>Javascript</option>
+  <option value="CSS"${obj.category === 'CSS' ? 'selected' : ''}>CSS</option>
+  <option value="HTML"${obj.category === 'HTML' ? 'selected' : ''}>Two</option>
+  <option value="General Term.."${obj.category === 'General Term..' ? 'selected' : ''}>General</option>
 </select>
-
-  <label for="category">Language</label>
-  <input type="text" class="form-control" id="category" placeholder="Placeholder" value="${obj.category || ''}" required>
-</div>
-  <div class="form-group">
-  <div class="form-group" id="select-category">
   </div>
 
   </div> <button type="submit" class="btn btn-primary">Submit Entry
