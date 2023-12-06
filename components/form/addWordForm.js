@@ -14,10 +14,10 @@ const addWordForm = (obj = {}) => {
     <textarea class="form-control" placeholder="Enter a definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
   </div>
   <select class="form-select" aria-label="Default select example" id="category" required>
-  <option selected>Select a Language/option>
+  <option selected>Select a Language</option>
   <option value="Javascript"${obj.category === 'Javascript' ? 'selected' : ''}>Javascript</option>
   <option value="CSS"${obj.category === 'CSS' ? 'selected' : ''}>CSS</option>
-  <option value="HTML"${obj.category === 'HTML' ? 'selected' : ''}>Two</option>
+  <option value="HTML"${obj.category === 'HTML' ? 'selected' : ''}>HTML</option>
   <option value="General Term.."${obj.category === 'General Term..' ? 'selected' : ''}>General</option>
 </select>
   </div>
