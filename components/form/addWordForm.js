@@ -21,7 +21,8 @@ const addWordForm = (obj = {}) => {
   <div class="form-group" id="select-category">
   </div>
 
-  </div> <button type="submit" id="submitWord" class="btn btn-primary">Submit Word</button>
+  </div> <button type="submit" class="btn btn-primary">Submit Entry
+  </button>
 </form>`;
 
   renderToDOM('#form-container', domString);

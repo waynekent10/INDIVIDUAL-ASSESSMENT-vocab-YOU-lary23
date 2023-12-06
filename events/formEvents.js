@@ -8,7 +8,7 @@ const formEvents = () => {
       const payload = {
         word: document.querySelector('#word').value,
         definition: document.querySelector('#definition').value,
-        // category: document.querySelector('#category').value,
+        category: document.querySelector('#category').value,
         // time_submitted: document.querySelector('#time_submitted').value,
       };
 
@@ -18,6 +18,18 @@ const formEvents = () => {
         updateWord(patchPayload).then(() => {
           getWords().then(showWords);
         });
+      });
+    }
+    if (e.target.id.includes('update-word')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      const payload = {
+        word: document.querySelector('#word').value,
+        definition: document.querySelector('#definition').value,
+        category: document.querySelector('#category').value,
+        firebaseKey,
+      };
+      updateWord(payload).then(() => {
+        getWords().then(showWords);
       });
     }
   });
