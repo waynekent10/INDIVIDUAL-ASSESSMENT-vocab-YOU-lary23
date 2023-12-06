@@ -5,19 +5,19 @@ import {
 import { showWords } from '../pages/vocab';
 
 const filterBtnsEvents = () => {
-  document.querySelector('#css-button').addEventListener('click', () => {
+  document.querySelector('#cssBtn').addEventListener('click', () => {
     wordsByCSS().then(showWords);
   });
-  document.querySelector('#java-button').addEventListener('click', () => {
+  document.querySelector('#javaBtn').addEventListener('click', () => {
     wordsByJava().then(showWords);
   });
-  document.querySelector('#html-button').addEventListener('click', () => {
+  document.querySelector('#htmlBtn').addEventListener('click', () => {
     wordsByHTML().then(showWords);
   });
-  document.querySelector('#general-button').addEventListener('click', () => {
+  document.querySelector('#generalBtn').addEventListener('click', () => {
     wordsInGeneral().then(showWords);
   });
-  document.querySelector('#all-button').addEventListener('click', () => {
+  document.querySelector('#allBtn').addEventListener('click', () => {
     getWords().then(showWords);
   });
 };
