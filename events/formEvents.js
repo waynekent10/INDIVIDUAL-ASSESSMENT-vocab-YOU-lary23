@@ -9,11 +9,11 @@ const formEvents = () => {
         word: document.querySelector('#word').value,
         definition: document.querySelector('#definition').value,
         category: document.querySelector('#category').value,
+
         // time_submitted: document.querySelector('#time_submitted').value,
       };
-
-      createWord(payload).then(({ word }) => {
-        const patchPayload = { firebaseKey: word };
+      createWord(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
 
         updateWord(patchPayload).then(() => {
           getWords().then(showWords);
