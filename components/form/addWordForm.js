@@ -7,7 +7,7 @@ const addWordForm = (obj = {}) => {
     <form id="${obj.firebaseKey ? `update-word--${obj.firebaseKey}` : 'submit-entry'}" class="mb-4">
     <div class="form-group">
       <label for="word">Word</label>
-      <input type="text" class="form-control" id="wordVocab" aria-describedby="bookTitle" placeholder="Enter a word or phrase" value="${obj.word || ''}" required>
+      <input type="text" class="form-control" id="word" aria-describedby="bookTitle" placeholder="Enter a word or phrase" value="${obj.word || ''}" required>
     </div>
     <div class="form-group">
     <label for="definition">Definition</label>
@@ -21,7 +21,8 @@ const addWordForm = (obj = {}) => {
   <div class="form-group" id="select-category">
   </div>
 
-  </div> <button type="submit" id="submitWord" class="btn btn-primary">Submit Word</button>
+  </div> <button type="submit" class="btn btn-primary">Submit Entry
+  </button>
 </form>`;
 
   renderToDOM('#form-container', domString);

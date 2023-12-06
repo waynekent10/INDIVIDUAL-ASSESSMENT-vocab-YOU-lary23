@@ -8,16 +8,28 @@ const formEvents = () => {
       const payload = {
         word: document.querySelector('#word').value,
         definition: document.querySelector('#definition').value,
-        // category: document.querySelector('#category').value,
+        category: document.querySelector('#category').value,
+
         // time_submitted: document.querySelector('#time_submitted').value,
       };
-
-      createWord(payload).then(({ word }) => {
-        const patchPayload = { firebaseKey: word };
+      createWord(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
 
         updateWord(patchPayload).then(() => {
           getWords().then(showWords);
         });
+      });
+    }
+    if (e.target.id.includes('update-word')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      const payload = {
+        word: document.querySelector('#word').value,
+        definition: document.querySelector('#definition').value,
+        category: document.querySelector('#category').value,
+        firebaseKey,
+      };
+      updateWord(payload).then(() => {
+        getWords().then(showWords);
       });
     }
   });
