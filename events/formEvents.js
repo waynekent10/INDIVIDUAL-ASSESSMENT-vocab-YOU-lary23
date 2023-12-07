@@ -1,5 +1,7 @@
 import { createWord, getWords, updateWord } from '../api/vocabData';
+import addWordForm from '../components/form/addWordForm';
 import { showWords } from '../pages/vocab';
+import clearDom from '../utils/clearDom';
 
 const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -32,6 +34,8 @@ const formEvents = () => {
         getWords().then(showWords);
       });
     }
+    addWordForm({});
+    clearDom();
   });
 };
 

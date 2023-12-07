@@ -1,6 +1,7 @@
 import { deleteSingleWord, getSingleWord, getWords } from '../api/vocabData';
 import addWordForm from '../components/form/addWordForm';
 import { showWords } from '../pages/vocab';
+import clearDom from '../utils/clearDom';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -18,6 +19,7 @@ const domEvents = () => {
     if (e.target.id.includes('submitWord')) {
       console.warn('ADD Word');
       addWordForm({});
+      clearDom();
     }
 
     if (e.target.id.includes('edit-word-btn')) {

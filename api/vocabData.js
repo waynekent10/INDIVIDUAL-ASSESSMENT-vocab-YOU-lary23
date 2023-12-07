@@ -125,7 +125,7 @@ const wordsByHTML = () => new Promise((resolve, reject) => {
 
 // TODO: FILTER WORDS BY GENERAL TERMS
 const wordsInGeneral = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json?orderBy="category"&equalTo="General Term..`, {
+  fetch(`${endpoint}/words.json?orderBy="category"&equalTo="General Term.."`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
