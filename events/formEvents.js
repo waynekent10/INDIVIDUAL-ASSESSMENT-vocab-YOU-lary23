@@ -4,7 +4,7 @@ import { showWords } from '../pages/vocab';
 import clearDom from '../utils/clearDom';
 import timestamp from '../utils/timestamp';
 
-const formEvents = () => {
+const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
     if (e.target.id.includes('submit-entry')) {
@@ -12,13 +12,14 @@ const formEvents = () => {
         word: document.querySelector('#word').value,
         definition: document.querySelector('#definition').value,
         category: document.querySelector('#category').value,
-        time_submitted: timestamp
+        time_submitted: timestamp,
+        uid: user.uid
       };
       createWord(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
         updateWord(patchPayload).then(() => {
-          getWords().then(showWords);
+          getWords(user).then(showWords);
         });
       });
     }
@@ -31,10 +32,10 @@ const formEvents = () => {
         firebaseKey,
       };
       updateWord(payload).then(() => {
-        getWords().then(showWords);
+        getWords(user).then(showWords);
       });
     }
-    addWordForm({});
+    addWordForm({}, user);
     clearDom();
   });
 };
