@@ -9,16 +9,16 @@ import formEvents from '../events/formEvents';
 import navigationEvents from '../events/navigationEvents';
 import { showWords } from '../pages/vocab';
 
-const startApp = () => {
+const startApp = (user) => {
   domBuilder();
-  domEvents();
-  formEvents();
+  domEvents(user);
+  formEvents(user);
   navBar();
   filterBtns();
   filterBtnsEvents();
   logoutButton();
-  navigationEvents();
-  getWords().then(showWords);
+  navigationEvents(user);
+  getWords(user.uid).then(showWords);
 };
 
 export default startApp;
