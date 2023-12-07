@@ -3,7 +3,7 @@ import addWordForm from '../components/form/addWordForm';
 import { showWords } from '../pages/vocab';
 import clearDom from '../utils/clearDom';
 
-const domEvents = () => {
+const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('delete-word')) {
       // eslint-disable-next-line no-alert
@@ -12,13 +12,13 @@ const domEvents = () => {
         const [, firebaseKey] = e.target.id.split('--');
 
         deleteSingleWord(firebaseKey).then(() => {
-          getWords().then(showWords);
+          getWords(user).then(showWords);
         });
       }
     }
     if (e.target.id.includes('submitWord')) {
       console.warn('ADD Word');
-      addWordForm({});
+      addWordForm({}, user);
       clearDom();
     }
 
