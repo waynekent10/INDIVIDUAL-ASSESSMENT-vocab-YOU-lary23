@@ -2,6 +2,7 @@ import { createWord, getWords, updateWord } from '../api/vocabData';
 import addWordForm from '../components/form/addWordForm';
 import { showWords } from '../pages/vocab';
 import clearDom from '../utils/clearDom';
+import timestamp from '../utils/timestamp';
 
 const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -11,8 +12,7 @@ const formEvents = () => {
         word: document.querySelector('#word').value,
         definition: document.querySelector('#definition').value,
         category: document.querySelector('#category').value,
-
-        // time_submitted: document.querySelector('#time_submitted').value,
+        time_submitted: timestamp
       };
       createWord(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
