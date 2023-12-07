@@ -3,8 +3,8 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 // TODO: Get WORDs
-const getWords = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json`, {
+const getWords = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/words.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -76,8 +76,8 @@ const updateWord = (payload) => new Promise((resolve, reject) => {
 });
 
 // TODO: FILTER WORDS BY JS
-const wordsByJava = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json?orderBy="category"&equalTo="Javascript"`, {
+const wordsByJava = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/words.json?orderBy="category"&equalTo="Javascript"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -92,8 +92,8 @@ const wordsByJava = () => new Promise((resolve, reject) => {
 });
 
 // TODO: FILTER WORDS BY CSS
-const wordsByCSS = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json?orderBy="category"&equalTo="CSS"`, {
+const wordsByCSS = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/words.json?orderBy="category"&equalTo="CSS"&equalTo="${uid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -108,8 +108,8 @@ const wordsByCSS = () => new Promise((resolve, reject) => {
 });
 
 // TODO: FILTER WORDS BY HTML
-const wordsByHTML = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json?orderBy="category"&equalTo="HTML"`, {
+const wordsByHTML = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/words.json?orderBy="category"&equalTo="HTML"&equalTo="${uid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -124,8 +124,8 @@ const wordsByHTML = () => new Promise((resolve, reject) => {
 });
 
 // TODO: FILTER WORDS BY GENERAL TERMS
-const wordsInGeneral = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json?orderBy="category"&equalTo="General Term.."`, {
+const wordsInGeneral = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/words.json?orderBy="category"&equalTo="General Term.."&equalTo="${uid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
