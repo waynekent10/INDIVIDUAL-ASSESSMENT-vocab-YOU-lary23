@@ -24,7 +24,7 @@ body {
  flex-wrap: wrap;
 }
 
-.logout {
+#logout {
   margin: 0 40px;
   font-size: 25px;
   color: white;
@@ -33,5 +33,11 @@ body {
 .filter-btns {
   display: flex;
   justify-content: center;
+  gap: 200px;
+}
+#button-container{
+  display: flex;
+  justify-content: center;
   gap: 100px;
+
 }

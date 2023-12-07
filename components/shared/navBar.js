@@ -6,7 +6,7 @@ const navBar = () => {
   <div class="container-fluid">
     <a class="navbar-brand" href="#" id="home">
       <img src="..." alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      Bootstrap
+      Vocab-You-lary
     </a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
