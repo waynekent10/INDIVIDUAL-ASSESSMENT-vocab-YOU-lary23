@@ -1,7 +1,6 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
 
-
 body {
   background-color: black;
   color: white;
@@ -24,11 +23,6 @@ body {
  flex-wrap: wrap;
 }
 
-#logout {
-  margin: 0 40px;
-  font-size: 25px;
-  color: white;
-}
 
 .filter-btns {
   display: flex;
