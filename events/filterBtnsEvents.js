@@ -4,7 +4,7 @@ import {
 } from '../api/vocabData';
 import { showWords } from '../pages/vocab';
 
-const filterBtnsEvents = () => {
+const filterBtnsEvents = (user) => {
   document.querySelector('#cssBtn').addEventListener('click', () => {
     wordsByCSS().then(showWords);
   });
@@ -18,7 +18,7 @@ const filterBtnsEvents = () => {
     wordsInGeneral().then(showWords);
   });
   document.querySelector('#allBtn').addEventListener('click', () => {
-    getWords().then(showWords);
+    getWords(user).then(showWords);
   });
 };
 export default filterBtnsEvents;
