@@ -133,7 +133,7 @@ const wordsInGeneral = (uid) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const category = Object.values(data).filter((item) => item.category === 'General Term..');
+      const category = Object.values(data).filter((item) => item.category === 'General');
       resolve(category);
     })
     .catch(reject);
