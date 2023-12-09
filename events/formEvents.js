@@ -30,12 +30,14 @@ const formEvents = (user) => {
         definition: document.querySelector('#definition').value,
         category: document.querySelector('#category').value,
         firebaseKey,
+        time_submitted: timestamp,
+        uid: user.uid
       };
       updateWord(payload).then(() => {
         getWords(user.uid).then(showWords);
       });
     }
-    addWordForm({}, user);
+    addWordForm({});
     clearDom();
   });
 };
