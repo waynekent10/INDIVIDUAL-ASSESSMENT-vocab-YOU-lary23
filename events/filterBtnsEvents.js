@@ -6,19 +6,20 @@ import { showWords } from '../pages/vocab';
 
 const filterBtnsEvents = (user) => {
   document.querySelector('#cssBtn').addEventListener('click', () => {
-    wordsByCSS().then(showWords);
+    wordsByCSS(user.uid).then(showWords);
   });
   document.querySelector('#javaBtn').addEventListener('click', () => {
-    wordsByJava().then(showWords);
+    wordsByJava(user.uid).then(showWords);
   });
   document.querySelector('#htmlBtn').addEventListener('click', () => {
-    wordsByHTML().then(showWords);
+    wordsByHTML(user.uid).then(showWords);
   });
   document.querySelector('#generalBtn').addEventListener('click', () => {
-    wordsInGeneral().then(showWords);
+    wordsInGeneral(user.uid).then(showWords);
   });
   document.querySelector('#allBtn').addEventListener('click', () => {
-    getWords(user).then(showWords);
+    console.warn('work do i');
+    getWords(user.uid).then(showWords);
   });
 };
 export default filterBtnsEvents;
