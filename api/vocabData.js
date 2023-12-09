@@ -77,7 +77,7 @@ const updateWord = (payload) => new Promise((resolve, reject) => {
 
 // TODO: FILTER WORDS BY JS
 const wordsByJava = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json?orderBy"${uid}"&equalTo"${uid}"`, {
+  fetch(`${endpoint}/words.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ const wordsByJava = (uid) => new Promise((resolve, reject) => {
 
 // TODO: FILTER WORDS BY CSS
 const wordsByCSS = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json?orderBy"${uid}"&equalTo"${uid}"`, {
+  fetch(`${endpoint}/words.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ const wordsByCSS = (uid) => new Promise((resolve, reject) => {
 
 // TODO: FILTER WORDS BY HTML
 const wordsByHTML = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json?orderBy"${uid}"&equalTo"${uid}"`, {
+  fetch(`${endpoint}/words.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ const wordsByHTML = (uid) => new Promise((resolve, reject) => {
 
 // TODO: FILTER WORDS BY GENERAL TERMS
 const wordsInGeneral = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json?orderBy="${uid}"&equalTo"${uid}"`, {
+  fetch(`${endpoint}/words.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
