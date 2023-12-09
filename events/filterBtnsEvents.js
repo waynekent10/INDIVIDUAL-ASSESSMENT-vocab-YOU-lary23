@@ -5,21 +5,21 @@ import {
 import { showWords } from '../pages/vocab';
 
 const filterBtnsEvents = (user) => {
+  document.querySelector('#all').addEventListener('click', () => {
+    getWords(user.uid).then(showWords);
+  });
   document.querySelector('#cssBtn').addEventListener('click', () => {
-    wordsByCSS(user).then(showWords);
+    wordsByCSS(user.uid).then(showWords);
   });
   document.querySelector('#javaBtn').addEventListener('click', () => {
-    wordsByJava(user).then(showWords);
+    wordsByJava(user.uid).then(showWords);
   });
   document.querySelector('#htmlBtn').addEventListener('click', () => {
-    wordsByHTML(user).then(showWords);
+    wordsByHTML(user.uid).then(showWords);
   });
   document.querySelector('#generalBtn').addEventListener('click', () => {
-    wordsInGeneral(user).then(showWords);
-  });
-  document.querySelector('#allBtn').addEventListener('click', () => {
-    console.warn('work do i');
-    getWords(user).then(showWords);
+    wordsInGeneral(user.uid).then(showWords);
   });
 };
+
 export default filterBtnsEvents;

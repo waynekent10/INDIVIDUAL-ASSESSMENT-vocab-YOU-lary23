@@ -15,7 +15,7 @@ const startApp = (user) => {
   formEvents(user);
   navBar();
   filterBtns();
-  filterBtnsEvents();
+  filterBtnsEvents(user);
   logoutButton();
   navigationEvents(user);
   getWords(user.uid).then(showWords);
