@@ -10,7 +10,7 @@ const navigationEvents = (user) => {
 
   // HOME PAGE
   document.querySelector('#home').addEventListener('click', () => {
-    getWords(user).then(showWords);
+    getWords(user.uid).then(showWords);
   });
   // CREATE WORD
   document.querySelector('#createEntry').addEventListener('click', () => {

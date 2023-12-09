@@ -18,7 +18,7 @@ const addWordForm = (obj = {}) => {
   <option value="Javascript"${obj.category === 'Javascript' ? 'selected' : ''}>Javascript</option>
   <option value="CSS"${obj.category === 'CSS' ? 'selected' : ''}>CSS</option>
   <option value="HTML"${obj.category === 'HTML' ? 'selected' : ''}>HTML</option>
-  <option value="General Term.."${obj.category === 'General Term..' ? 'selected' : ''}>General </option>
+  <option value="General"${obj.category === 'General' ? 'selected' : ''}>General </option>
 </select>
   </div>
 

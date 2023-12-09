@@ -12,7 +12,7 @@ const domEvents = (user) => {
         const [, firebaseKey] = e.target.id.split('--');
 
         deleteSingleWord(firebaseKey).then(() => {
-          getWords(user).then(showWords);
+          getWords(user.uid).then(showWords);
         });
       }
     }

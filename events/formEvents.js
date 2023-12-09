@@ -19,7 +19,7 @@ const formEvents = (user) => {
         const patchPayload = { firebaseKey: name };
 
         updateWord(patchPayload).then(() => {
-          getWords(user).then(showWords);
+          getWords(user.uid).then(showWords);
         });
       });
     }
@@ -32,7 +32,7 @@ const formEvents = (user) => {
         firebaseKey,
       };
       updateWord(payload).then(() => {
-        getWords(user).then(showWords);
+        getWords(user.uid).then(showWords);
       });
     }
     addWordForm({}, user);
